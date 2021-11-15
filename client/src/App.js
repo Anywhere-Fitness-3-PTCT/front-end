@@ -1,31 +1,21 @@
 import './App.css';
 import React from 'react';
 
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      client: [
-        {
-          time: '',
-          date: '',
-          duration: '',
-          type: '',
-          intensity: '',
-          location: ''
-        }
-      ]
-    }
-  }
+const App = () => {
+  return(
+    <div>
+      <h1>Fitness App</h1>
 
-  render() {
-    return (
-      <div>
-        <h1>Fitness App</h1>
-        <ClassList client={this.state.client} />
-      </div>
-    )
-  }
+    </div>
+  )
+}
+
+const SubComp = () => {
+  return(
+    <div>
+      <h2>Class</h2>
+    </div>
+  )
 }
 
 export default App;
