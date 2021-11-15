@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 const App = () => {
   const [classes, setClasses] = useState();
-  console.log(classes);
+  // console.log(classes);
 
   return(
     <div className='App'>
@@ -27,7 +27,7 @@ const SubComp = (props) => {
 
 const SubComp2 = () => {
   return(
-    <div className='Sub-Compoonent'>
+    <div className='Sub-Compoonent2'>
       <h4>Class time: </h4>
       <h4>Date: </h4>
       <h4>Duration: </h4>
