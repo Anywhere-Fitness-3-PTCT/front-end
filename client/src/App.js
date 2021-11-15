@@ -1,9 +1,11 @@
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 
 const App = () => {
+  
+
   return(
-    <div>
+    <div className='App'>
       <h1>Fitness App</h1>
       <SubComp />
     </div>
@@ -12,7 +14,7 @@ const App = () => {
 
 const SubComp = () => {
   return(
-    <div>
+    <div className='Sub-Component'>
       <h2>Classes</h2>
     </div>
   )

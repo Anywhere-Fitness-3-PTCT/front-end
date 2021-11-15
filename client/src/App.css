@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  border-style: solid black;
+  border-style: 3px solid black;
 }
 
 .App-logo {
@@ -36,4 +36,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Sub-Component {
+  border-style: 2px solid orange;
+  width: 90%;
+  margin: auto;
 }
