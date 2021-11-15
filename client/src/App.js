@@ -5,7 +5,7 @@ const App = () => {
   return(
     <div>
       <h1>Fitness App</h1>
-
+      <SubComp />
     </div>
   )
 }
@@ -13,7 +13,7 @@ const App = () => {
 const SubComp = () => {
   return(
     <div>
-      <h2>Class</h2>
+      <h2>Classes</h2>
     </div>
   )
 }
