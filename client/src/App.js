@@ -1,5 +1,11 @@
 import './App.css';
 import React, { useState } from 'react';
+import { Route, Link, Switch } from 'react-router-dom';
+import PrivateRoute from './PrivateRoute';
+import Signup from './components/SignUp';
+import Login from './components/LogIn';
+import Home from './components/Home';
+import Reservation from './components/Reservation';
 
 const App = () => {
   const [classes, setClasses] = useState();
@@ -7,10 +13,15 @@ const App = () => {
 
   return(
     <div className='App'>
-      <h1>Fitness App</h1>
-      <button>Sign Up</button>
-      <button>Login</button>
-      <SubComp classes={classes} setClasses={setClasses} />
+      <Home />
+      {/* <SubComp classes={classes} setClasses={setClasses} /> */}
+      <Switch>
+        <PrivateRoute exact path="/reservation" component={Reservation} />
+        <PrivateRoute exact path="/classes" component={SubComp} />
+        <Route exact path="/signup" component={Signup} />
+        <Route exact path="/login" component={Login}/>
+        <Route exact path="/" component={Home}/>
+      </Switch>
       
     </div>
   )
@@ -21,6 +32,7 @@ const SubComp = (props) => {
     <div className='Sub-Component'>
       <h2>Classes</h2>
       <SubComp2 />
+      <Reservation />
     </div>
   )
 }

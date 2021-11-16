@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import * as yup from "yup";
+import axiosWithAuth from "../axiosWithAuth";
 
 const Schema = yup.object().shape({
   username: yup.string().required("Username is Required"),
@@ -44,7 +45,7 @@ function Signup() {
     phoneNumber: signinState.phoneNumber.trim(),
   };
 
-  axios
+  axiosWithAuth()
   .post(
     "",
     newUser

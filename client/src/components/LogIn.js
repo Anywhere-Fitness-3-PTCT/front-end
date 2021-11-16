@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import axiosWithAuth from "../axiosWithAuth";
 
 
 
@@ -24,7 +25,7 @@ const Login = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios
+    axiosWithAuth()
       .post("",formValues)
       .then((res) => {
         console.log(res);
