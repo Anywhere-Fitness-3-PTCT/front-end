@@ -18,7 +18,7 @@ const App = () => {
   )
 }
 
-const SubComp = (props) => {
+const SubComp = () => {
   const { classes, setClasses } = useContext(ClassesContext);
 
   return (
@@ -31,8 +31,20 @@ const SubComp = (props) => {
   )
 }
 
-const SubComp2 = (props) => {
-  const { classes } = useContext(ClassesContext);
+const SubComp2 = () => {
+  const [ classes, setClasses ] = useContext(ClassesContext);
+
+  const addClass = () => {
+    setClasses({
+      ...classes,
+        time: '',
+        date: '',
+        duration: '',
+        type: '',
+        intensity: '',
+        location: ''
+    })
+  }
 
   return (
     <div className='Sub-Component2'>
@@ -42,13 +54,13 @@ const SubComp2 = (props) => {
       <h4>Class type: </h4>
       <h4>Intensity: </h4>
       <h4>Location: </h4>
-      <button>Add Class</button>
+      <button onClick={addClass}>Add Class</button>
     </div>
   )
 }
 
-const SubComp3 = (props) => {
-  const { classes } = useContext(ClassesContext);
+const SubComp3 = () => {
+  // const { classes } = useContext(ClassesContext);
 
   return (
     <div className='Sub-Component2'>
