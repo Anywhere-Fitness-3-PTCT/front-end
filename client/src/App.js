@@ -10,10 +10,12 @@ import Reservation from './components/Reservation';
 const App = () => {
   const [classes, setClasses] = useState();
   // console.log(classes);
+  const pic = "https://www.multivu.com/players/English/7942951-anytime-fitness-every-step-counts/image/anytime-fitness-get-to-a-healthier-place-16-HR.jpg";
 
   return(
     <div className='App'>
       <Home />
+      <img src={pic} alt="Anytime Fitness" />
       {/* <SubComp classes={classes} setClasses={setClasses} /> */}
       <Switch>
         <PrivateRoute exact path="/reservation" component={Reservation} />

@@ -46,10 +46,7 @@ function Signup() {
   };
 
   axiosWithAuth()
-  .post(
-    "",
-    newUser
-       )
+  .post("", newUser)
   .then((res) => {
     console.log("NEW RESPONSE", res);
     push("/login");
@@ -60,7 +57,7 @@ function Signup() {
                   });
   setsigninState(defaultVal);
 
-                };
+  };
 
 
   const validate = (e) => {
