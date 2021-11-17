@@ -19,7 +19,7 @@ const App = () => {
 }
 
 const SubComp = (props) => {
-  const [classes] = useContext(ClassesContext);
+  const { classes, setClasses } = useContext(ClassesContext);
 
   return (
     <div className='Sub-Component'>
