@@ -26,7 +26,7 @@ function Signup() {
     phoneNumber: "",
   });
 
-  const history = useHistory();
+  const { push } = useHistory();
 
   useEffect(() => {
     Schema.isValid(signinState).then((valid) => {
@@ -52,6 +52,7 @@ function Signup() {
        )
   .then((res) => {
     console.log("NEW RESPONSE", res);
+    push("/login");
                  })
   .catch((err) => {
     debugger;
@@ -86,7 +87,7 @@ function Signup() {
 
   return (
     <div>
-      <h2>Login</h2>
+      <h2>Sign Up</h2>
       <form onSubmit={formSubmit}>
           <label htmlFor="username">Username:</label>
             <input
