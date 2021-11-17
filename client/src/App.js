@@ -22,7 +22,7 @@ const App = () => {
         <PrivateRoute exact path="/classes" component={SubComp} />
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/login" component={Login}/>
-        <Route exact path="/" component={Home}/>
+        <Route exact path="/" component={Login}/>
       </Switch>
       
     </div>
