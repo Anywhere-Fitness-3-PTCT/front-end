@@ -31,7 +31,7 @@ const Login = (props) => {
         console.log(res);
         setError("");
         localStorage.setItem("token", res.data.token);
-        push("");
+        push("/classes");
       })
       .catch((err) => {
         console.log(err);

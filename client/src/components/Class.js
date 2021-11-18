@@ -1,3 +1,7 @@
+import React, { createContext, useContext } from "react";
+
+const ClassesContext = createContext();
+
 const SubComp = () => {
     const { classes, setClasses } = useContext(ClassesContext);
 
