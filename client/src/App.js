@@ -1,6 +1,5 @@
 import './App.css';
 import React, { useState } from 'react';
-
 import { Route, Link, Switch } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
 import Signup from './components/SignUp';
