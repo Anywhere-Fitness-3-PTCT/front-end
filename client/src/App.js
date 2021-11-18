@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, createContext, useContext } from 'react';
 import { Route, Link, Switch } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
 import Signup from './components/SignUp';
@@ -15,10 +15,10 @@ const App = () => {
 
   return (
     <div className='App'>
-      <h1>Fitness App</h1>
-      <ClassesContext.Provider value={[classes, setClasses]}>
+      {/* <h1>Fitness App</h1> */}
+      {/* <ClassesContext.Provider value={[classes, setClasses]}>
         <SubComp classes={classes} setClasses={setClasses} />
-      </ClassesContext.Provider>
+      </ClassesContext.Provider> */}
 
       <Home />
       <img src={pic} alt="Anytime Fitness" />
