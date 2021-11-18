@@ -2,6 +2,8 @@
   text-align: center;
   border: 3px solid black;
   margin: 3%;
+  margin-top: 2%;
+  background-color: linen;
 }
 
 .App-logo {
@@ -45,10 +47,12 @@
   margin: auto;
   margin-bottom: 9px;
   margin-top: 6px;
+  background-color: lightskyblue;
 }
 
 .Sub-Component2 {
-  text-align: left;
+  text-align: center;
+  background-color: lightskyblue;
 }
 
 img {
