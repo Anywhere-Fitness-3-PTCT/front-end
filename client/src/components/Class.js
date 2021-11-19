@@ -1,14 +1,14 @@
 import React, { createContext, useContext } from "react";
 import Reservation from "./Reservation";
 
-const ClassesContext = createContext();
+export const ClassesContext = createContext();
 
 const SubComp = () => {
-    const { classes, setClasses } = useContext(ClassesContext);
+    const [ classes, setClasses ] = useContext(ClassesContext);
+    console.log(classes);
 
     return (
         <div className='Sub-Component'>
-            <h2>Classes</h2>
             <SubComp2 />
             <br />
             <SubComp3 classes={classes} setClasses={setClasses} />
@@ -18,22 +18,24 @@ const SubComp = () => {
 }
 
 const SubComp2 = () => {
-    const [classes, setClasses] = useContext(ClassesContext);
+    const { classes } = useContext(ClassesContext);
+    console.log(classes);
 
     const addClass = () => {
-        setClasses({
-            ...classes,
-            time: '',
-            date: '',
-            duration: '',
-            type: '',
-            intensity: '',
-            location: ''
-        })
+        // setClasses({
+        //     ...classes,
+        //     time: '',
+        //     date: '',
+        //     duration: '',
+        //     type: '',
+        //     intensity: '',
+        //     location: ''
+        // })
     }
 
     return (
         <div className='Sub-Component2'>
+            <h2>Client</h2>
             <h4>Class time: </h4>
             <h4>Date: </h4>
             <h4>Duration: </h4>
@@ -46,10 +48,12 @@ const SubComp2 = () => {
 }
 
 const SubComp3 = () => {
-    // const { classes } = useContext(ClassesContext);
+    const { dispatch } = useContext(ClassesContext);
+    console.log(dispatch);
 
     return (
         <div className='Sub-Component2'>
+            <h2>Instructor</h2>
             <h4>Name: </h4>
             <h4>Type: </h4>
             <h4>Start Time: </h4>
