@@ -11,9 +11,10 @@ import SubComp from './components/Class';
 import { initialState, reducer } from './reducer/classReducer';
 import { ClassesContext } from './components/Class';
 import PostClass from './components/PostClass';
+import List from './components/List';
 
 const App = () => {
-  const [classes, dispatch] = useReducer(reducer, initialState);
+  // const [classes, dispatch] = useReducer(reducer, initialState);
   // console.log(classes);
   const pic = "https://www.multivu.com/players/English/7942951-anytime-fitness-every-step-counts/image/anytime-fitness-get-to-a-healthier-place-16-HR.jpg";
 
@@ -23,12 +24,12 @@ const App = () => {
       <Home />
       <img src={pic} alt="Anytime Fitness" />
       <Switch>
-        <PrivateRoute exact path="/reservation" component={Reservation} />
-          <PostClass />
-        <PrivateRoute exact path="/classes" component={SubComp} />
-        <ClassesContext.Provider value={[classes, dispatch]}>
+        {/* <PrivateRoute exact path="/reservation" component={Reservation} /> */}
+          {/* <PostClass /> */}
+        <PrivateRoute exact path="/classes" component={List} />
+        {/* <ClassesContext.Provider value={[classes, dispatch]}>
           <SubComp />
-        </ClassesContext.Provider>
+        </ClassesContext.Provider> */}
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/" component={Login} />

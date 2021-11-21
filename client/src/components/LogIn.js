@@ -26,7 +26,7 @@ const Login = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axiosWithAuth()
-      .post("",formValues)
+      .post("https://anywherefitness-api.herokuapp.com/api/auth/login",formValues)
       .then((res) => {
         console.log(res);
         setError("");

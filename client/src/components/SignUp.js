@@ -7,13 +7,11 @@ import axiosWithAuth from "../axiosWithAuth";
 const Schema = yup.object().shape({
   username: yup.string().required("Username is Required"),
   password: yup.string().required("Password is Required"),
-  phoneNumber: yup.string().required("Please use a Valid Phone Number")
 });
 
 const defaultVal = {
     username: "",
     password: "",
-    phoneNumber: "",
   }
 
 
@@ -23,7 +21,6 @@ function Signup() {
   const [err, setErr] = useState({
     username: "",
     password: "",
-    phoneNumber: "",
   });
 
   const { push } = useHistory();
@@ -42,11 +39,10 @@ function Signup() {
   const newUser = {
     username: signinState.username.trim(),
     password: signinState.password.trim(),
-    phoneNumber: signinState.phoneNumber.trim(),
   };
 
   axiosWithAuth()
-  .post("", newUser)
+  .post("https://anywherefitness-api.herokuapp.com/api/auth/register", newUser)
   .then((res) => {
     console.log("NEW RESPONSE", res);
     push("/login");
@@ -109,18 +105,6 @@ function Signup() {
               onChange={inputChange}
             />
             {err.password.length > 0 ? <p className="error">{err.password}</p> : null}
-
-
-            <label htmlFor="phoneNumber">Phone Number:</label>
-            <input
-            type="text"
-            placeholder="Phone #"
-            id="phoneNumber"
-            name="phoneNumber"
-            value={signinState.phoneNumber}
-            onChange={inputChange}
-            />
-            {err.phoneNumber.length > 0 ? <p>{err.phoneNumber}</p> : null}
           
         <button type="submit" disabled={isValid}>
           Sign Up
