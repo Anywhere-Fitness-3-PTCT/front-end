@@ -24,7 +24,7 @@ const App = () => {
       <Home />
       <img src={pic} alt="Anytime Fitness" />
       <Switch>
-        {/* <PrivateRoute exact path="/reservation" component={Reservation} /> */}
+        <PrivateRoute exact path="/reservation" component={Reservation} />
           {/* <PostClass /> */}
         <PrivateRoute exact path="/classes" component={List} />
         {/* <ClassesContext.Provider value={[classes, dispatch]}>
