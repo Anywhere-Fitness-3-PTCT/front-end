@@ -11,27 +11,14 @@ const SubComp = () => {
         <div className='Sub-Component'>
             <SubComp2 />
             <br />
-            <SubComp3 classes={classes} setClasses={setClasses} />
+            {/* <SubComp3 classes={classes} setClasses={setClasses} /> */}
             <Reservation />
         </div>
     )
 }
 
 const SubComp2 = () => {
-    const { classes } = useContext(ClassesContext);
-    console.log(classes);
-
-    const addClass = () => {
-        // setClasses({
-        //     ...classes,
-        //     time: '',
-        //     date: '',
-        //     duration: '',
-        //     type: '',
-        //     intensity: '',
-        //     location: ''
-        // })
-    }
+    const { dispatch } = useContext(ClassesContext);
 
     return (
         <div className='Sub-Component2'>
@@ -42,14 +29,14 @@ const SubComp2 = () => {
             <h4>Class type: </h4>
             <h4>Intensity: </h4>
             <h4>Location: </h4>
-            <button onClick={addClass}>Add Class</button>
+            <button>Add Class</button>
         </div>
     )
 }
 
 const SubComp3 = () => {
     const { dispatch } = useContext(ClassesContext);
-    console.log(dispatch);
+    // console.log(dispatch);
 
     return (
         <div className='Sub-Component2'>
