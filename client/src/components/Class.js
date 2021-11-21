@@ -9,10 +9,9 @@ const SubComp = () => {
 
     return (
         <div className='Sub-Component'>
-            <SubComp2 />
-            <br />
-            {/* <SubComp3 classes={classes} setClasses={setClasses} /> */}
+            <SubComp2 classes={classes} setClasses={setClasses} />
             <Reservation />
+            <SubComp3 />
         </div>
     )
 }
@@ -22,7 +21,6 @@ const SubComp2 = () => {
 
     return (
         <div className='Sub-Component2'>
-            <h2>Client</h2>
             <h4>Class time: </h4>
             <h4>Date: </h4>
             <h4>Duration: </h4>

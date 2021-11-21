@@ -1,5 +1,5 @@
 import './App.css';
-import React, { createContext, useReducer } from 'react';
+import React, { useReducer } from 'react';
 import { Route, Link, Switch } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
 import Signup from './components/SignUp';
@@ -24,10 +24,10 @@ const App = () => {
       <img src={pic} alt="Anytime Fitness" />
       <Switch>
         <PrivateRoute exact path="/reservation" component={Reservation} />
+          <PostClass />
         <PrivateRoute exact path="/classes" component={SubComp} />
         <ClassesContext.Provider value={[classes, dispatch]}>
           <SubComp />
-          <PostClass />
         </ClassesContext.Provider>
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/login" component={Login} />

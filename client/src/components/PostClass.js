@@ -6,7 +6,7 @@ class PostClass extends React.Component {
     constructor(ClassesContext) {
         super(ClassesContext);
         this.state = initialState;
-        console.log(initialState);
+        // console.log(initialState);
     }
 
     handleChange = e => {
