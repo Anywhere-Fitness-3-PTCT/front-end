@@ -1,16 +1,11 @@
 import './App.css';
-import React, { useReducer } from 'react';
-import { Route, Link, Switch } from 'react-router-dom';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
 import Signup from './components/SignUp';
 import Login from './components/LogIn';
 import Home from './components/Home';
 import Reservation from './components/Reservation';
-import SubComp from './components/Class';
-
-import { initialState, reducer } from './reducer/classReducer';
-import { ClassesContext } from './components/Class';
-import PostClass from './components/PostClass';
 import List from './components/List';
 
 const App = () => {

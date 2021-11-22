@@ -17,7 +17,7 @@ const SubComp = () => {
 }
 
 const SubComp2 = () => {
-    const { dispatch } = useContext(ClassesContext);
+    // const { dispatch } = useContext(ClassesContext);
 
     return (
         <div className='Sub-Component2'>
@@ -33,7 +33,7 @@ const SubComp2 = () => {
 }
 
 const SubComp3 = () => {
-    const { dispatch } = useContext(ClassesContext);
+    // const { dispatch } = useContext(ClassesContext);
     // console.log(dispatch);
 
     return (

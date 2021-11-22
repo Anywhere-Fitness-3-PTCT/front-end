@@ -1,6 +1,5 @@
 import React from "react";
 import { initialState } from "../reducer/classReducer";
-import { ClassesContext } from "./Class";
 
 class PostClass extends React.Component {
     constructor(ClassesContext) {
